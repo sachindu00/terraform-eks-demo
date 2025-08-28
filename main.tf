@@ -12,6 +12,7 @@ provider "aws" {
   region = "us-east-1" 
 }
 
+#VPC Networking 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "~> 5.0"
@@ -32,7 +33,7 @@ module "vpc" {
   }
 }
 
-# Create the EKS cluster
+# EKS cluster
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 19.0"
