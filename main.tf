@@ -9,10 +9,9 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1" # You can change this to your preferred region
+  region = "us-east-1" 
 }
 
-# Create a VPC module for networking
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "~> 5.0"
@@ -52,7 +51,7 @@ module "eks" {
       max_size     = 2
       desired_size = 1
 
-      instance_types = ["t3.small"] # A low-cost instance type for the demo
+      instance_types = ["t3.small"] 
     }
   }
 
